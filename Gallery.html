@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="khunoplanet.css">
+  <title>Khunoplanet</title>
+  <style>
+    i{
+      color: black;
+    }
+  </style>
+ 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="Homepage.html">Khunoplanet</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="Gallery.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9c0 .013 0 .027.002.04V12l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15 9.499V3.5a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm4.502 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+          </svg>  Gallery <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+          </svg> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="GPAcalculate.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+          </svg> GPA</a>
+        </li>
+      </ul>
+      <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+        <path d="M14.5 9.5a1.5 1.5 0 0 0 0-3v3z"/>
+        <path fill-rule="evenodd" d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"/>
+        <path fill-rule="evenodd" d="M6.332 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2.072l.307-1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h3.391l.941-1zM4.45 6H2v4h1.313a1.5 1.5 0 0 1-.405-2.361L4.45 6zm.976 5l-.308 1H6.96l.21-.224h.001l.73-.776H6.53l-.085.09.028-.09H5.426zm1.354-1H5.733l.257-.833H4a.5.5 0 0 1-.364-.843l.793-.843L5.823 6h1.373L5.157 8.167h1.51a.5.5 0 0 1 .478.647L6.78 10zm.69 0h1.374l1.394-1.482.793-.842a.5.5 0 0 0-.364-.843h-1.99L8.933 6H7.887l-.166.54-.199.646A.5.5 0 0 0 8 7.833h1.51L7.47 10zm.725-5H9.24l.308-1H7.706l-.942 1h1.374l.085-.09-.028.09zm2.4-1l-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.405zm-.378 6H12V8.02a1.499 1.499 0 0 1-.241.341L10.217 10zM12 6.646V6h-.646a1.5 1.5 0 0 1 .646.646z"/>
+      </svg>
+  </nav>
+
+  <table class="text-center mt-5">
+    <tr>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/d8/cb/be/d8cbbe8d0fd3b5a1bfd44a2eac8f3c41.jpg"
+            class="figure-img img-fluid rounded " width="50%">
+          <figcaption class="figure-caption"><i> Driving with dad in the evening.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/17/c3/74/17c3749a6fc64ebf6188c1446c5bd1bb.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i> Waking up late in the summer.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/d2/ad/6b/d2ad6bb905b1f8c48f562a0c78321241.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>After friends back them home.</i></figcaption>
+        </figure>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/be/03/36/be0336880c455af3260d4ad6059ccad8.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>Reading and listening lofi in the morning.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/fd/76/a7/fd76a703c02008f41f66c7c112113fff.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>My parent go out and i just be alone.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/2b/a1/18/2ba118ba65a4e1f8e4a6d42531eff76b.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>Having launch at the market without friend.</i></figcaption>
+        </figure>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/72/2d/d5/722dd57e49e153e2292a94b7f36ed527.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>Dinner with some special that's another me.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/f1/bd/30/f1bd3004b0df1e291cff35dc3c18010b.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>6 pm. not good to nap but today i'm exhausted.</i></figcaption>
+        </figure>
+      </td>
+      <td>
+        <figure class="figure">
+          <img src="https://i.pinimg.com/564x/de/e5/e0/dee5e0b1c44963860319bc88a0efbc44.jpg"
+            class="figure-img img-fluid rounded" width="50%">
+          <figcaption class="figure-caption"><i>1 of 365 is fulfill day when be with you.</i></figcaption>
+        </figure>
+      </td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

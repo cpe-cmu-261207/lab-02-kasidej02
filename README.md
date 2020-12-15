@@ -1,20 +1,19 @@
-# 261207-Lab-02
-### Week 2 - CSS and JavaScript
+# 261207-Lab-01
+## HTML - Personal Web Site
 
-1. ให้ นศ. ปรับปรุง Personal Web Site ที่ได้พัฒนาจาก Lab-01 โดยใช้ **CSS** หรือ **CSS Framework**
-2. ให้ นศ. เพิ่มความสามารถให้กับ Personal Web Site ด้วยการเพิ่ม**เพจสำหรับการคำนวณ GPA**
+ให้นศ.สร้าง Personal Web site ด้วย HTML โดยต้องประกอบไปด้วยหน้าเว็บเพจอย่างน้อยคือ
 
-โดยเพจสำหรับการคำนวณ GPA มีต้องมีคุณสมบัติพื้นฐานดังนี้
-   - ใช้ **Vanila JavaScript** ในการประมวลผลต่าง ๆ โดย*แยกส่วนของ JavaScript ออกเป็นไฟล์ต่างหาก*
-   - มีฟอร์มให้ผู้ใช้สามารถเพิ่ม**ข้อมูลวิชาเรียน** ได้แก่ ชื่อวิชา ภาคเรียน เกรดที่ได้รับ
-   - มีส่วนแสดงรายการวิชาเรียนที่ได้เพิ่มเข้ามาแล้ว
-   - สามารถคำนวณ**เกรดเฉลี่ยรวม เกรดเฉลี่ยรวมวิชาเมเจอร์ (261xxx/269xxx) เกรดเฉลี่ยเฉพาะภาคเรียนที่สนใจ**
-   - สามารถเพิ่มความอื่น ๆ นอกเหนือจากที่กำหนดได้ตามอัธยาศัย
+- **Homepage (หน้าหลัก)**: แสดงข้อมูลประวัติย่อ (Resume/CV) ของตัวนศ. ได้แก่ คำอธิบายอย่างย่อเกี่ยวกับตัวนศ. การศึกษา ประสบการณ์ ความสามารถ งานอดิเรก และอื่นๆ
+- **Gallery (แกลลอรี)**: แสดงรูปภาพที่นศ.ชอบ 8 - 12 รูป พร้อมคำอธิบายใต้ภาพ
+- **Contact (ติดต่อ)**: แสดงแบบฟอร์มป้อนข้อมูลสำหรับผู้ที่ต้องการติดต่อ นศ.
 
-เมื่อทำเสร็จ ให้นศ.ส่งโค้ดผ่าน GitHub classroom จากนั้น deploy ตัวเว็บไซต์ด้วยบริการ GitHub Pages แล้วคัดลอก URL ของเว็บไซต์ที่ deploy แล้วมาส่งอีกครั้งหนึ่ง
+ผู้เข้าชมต้องสามารถคลิกเปลี่ยนหน้าเพจไปมาได้ นศ.สามารถดูตัวอย่างได้[ที่นี่](https://o365cmu-my.sharepoint.com/:b:/g/personal/dome_potikanond_cmu_ac_th/EbtfdSuWycREkrBEdA4vQToBHIMRmjIFQfOeLwgJtMpIJQ?e=SUN7ck)
+
+ใน Lab นี้ ให้นศ.พัฒนาเว็บไซต์ด้วย **HTML** เท่านั้น (ยังไม่ต้องใช้ CSS และ Javascrip)
+
+นอกเหนือจากข้อกำหนดข้างต้น นศ.สามารถพัฒนาให้เว็บไซต์มีรูปแบบ (layout) ที่แตกต่างจากตัวอย่างได้ตามอัธยาศัย
 
 Reference:
 
-- [JavaScript @w3schools](https://www.w3schools.com/js/DEFAULT.asp)
-- [Create a GitHub Pages Site](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site)
-
+- [CS50 Harvard College (week 8)](https://cs50.harvard.edu/college/2020/fall/weeks/8/)
+- [w3schools](https://www.w3schools.com/html/)
