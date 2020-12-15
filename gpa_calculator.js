@@ -1,86 +1,168 @@
-const add = document.querySelector("#add");
-const courseCode = document.querySelector("#course-code");
-const unitLoad = document.querySelector("#unit-load");
-const grade = document.querySelector("#grade");
-const tbody = document.querySelector("#tbody");
-const tfoot = document.querySelector("#tfoot");
-const table = document.querySelector("#table");
-const calcGp = document.querySelector("#calc-gp");
-const clear = document.querySelector("#clear");
+let gpa_cal = 0
+let credit_cal1 = 0
+let credit_cal2 = 0
+let credit_cal3 = 0
+let sem1_cal = 0
+let sem2_cal = 0
+let major = 0
+let gpacal1 = 0
+let gpacal2 = 0
+let gpacal3 = 0
 
-let gpArry = [];
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('form').onsubmit = function () {
+        event.preventDefault()
+        const task = document.querySelector('#task')
 
-add.addEventListener("click", () => {
-  if (
-    courseCode.value === "" ||
-    unitLoad.value <= 0 ||
-    grade.selectedIndex === 0
-  ) {
-    alert("Wrong input,check and try again");
-  } else {
-    const tr = document.createElement("tr");
-    const tdCourseCode = document.createElement("td");
-    tdCourseCode.innerHTML = courseCode.value;
-    const tdUnitLoad = document.createElement("td");
-    tdUnitLoad.innerHTML = unitLoad.value;
-    const tdGrade = document.createElement("td");
-    tdGrade.innerHTML = grade.options[grade.selectedIndex].text;
-    tr.appendChild(tdCourseCode);
-    tr.appendChild(tdUnitLoad);
-    tr.appendChild(tdGrade);
-    tbody.appendChild(tr);
-    table.classList.remove("display-none");
-    calcGp.classList.remove("display-none");
-    clear.classList.remove("display-none");
-    gpArry.push({
-      unitLoad: unitLoad.value,
-      grade: grade.options[grade.selectedIndex].value,
-    });
-    console.log(gpArry);
-    courseCode.value = "";
-    unitLoad.value = "";
-    grade.selectedIndex = "0";
-  }
-});
+        const list = document.createElement('tr')
 
-calcGp.addEventListener("click", () => {
-  let unitLoads = 0,
-    productOfUnitLoadsAndGrades = 0,
-    sumOfProductOfUnitLoadsAndGrades = 0;
+        const subject = document.createElement('td')
+        const sub = document.querySelector("#sub").value
 
-  gpArry.forEach((result) => {
-    unitLoads += parseFloat(result.unitLoad);
-    productOfUnitLoadsAndGrades =
-      parseFloat(result.unitLoad) * parseFloat(result.grade);
-    sumOfProductOfUnitLoadsAndGrades += productOfUnitLoadsAndGrades;
-  });
-  const tr = document.createElement("tr");
+        const semester = document.createElement('td')
+        const sem = document.getElementById("sem").value
 
-  tdTotalUnitLoad = document.createElement("td");
-  tdTotalUnitLoad.innerHTML = `your total unit load is ${unitLoads}`;
+        const grade = document.createElement('td')
+        const gpa = document.querySelector("#gpa").value
 
-  tdGpa = document.createElement("td");
-  tdGpa.setAttribute("colspan", "2");
-  tdGpa.innerHTML = `your GPA is ${(
-    sumOfProductOfUnitLoadsAndGrades / unitLoads
-  ).toFixed(2)} `;
+        const credit = document.createElement('td')
+        let cre = document.querySelector("#cre").value
 
-  tr.appendChild(tdTotalUnitLoad);
-  tr.appendChild(tdGpa);
-    if (tfoot.querySelector("tr") !== null) {
-        tfoot.querySelector("tr").remove();
+  
+        console.log(gpa)
+
+        if (sub === '' && sem === '' && gpa === '') {
+            alert('Please input your data')
+            var df = false
+        }
+        else if (sem.length != 1) {
+            df = false
+        }
+    
+        else if (sub.length == 0 || sub.length > 6 || sub.length < 6) {
+            alert("Subject code 261xxx")
+            df = false
+        }
+        else if (cre.length > 1 || cre > '9' || cre < '1') {
+            alert("Credit is 1 to 9")
+            df = false
+        }
+        else {
+            df = true
+        }
+
+        console.log(df)
+
+
+        if (gpa === 'A') {
+            gpa_cal = 4
+        }
+        if (gpa === 'B+') {
+            gpa_cal = 3.5
+        }
+        if (gpa === 'B') {
+            gpa_cal = 3
+        }
+        if (gpa === 'C+') {
+            gpa_cal = 2.5
+        }
+        if (gpa === 'C') {
+            gpa_cal = 2
+        }
+        if (gpa === 'D+') {
+            gpa_cal = 1.5
+        }
+        if (gpa === 'D') {
+            gpa_cal = 1
+        }
+        if (gpa === 'F') {
+            gpa_cal = 0
+        }
+
+        if(cre === '1'){
+            cre = 1
+        }
+        if(cre === '2'){
+            cre = 2
+        }
+        if(cre === '3'){
+            cre = 3
+        }
+        if(cre === '4'){
+            cre = 4
+        }
+        if(cre === '5'){
+            cre = 5
+        }
+        if(cre === '6'){
+            cre = 6
+        }
+        if(cre === '7'){
+            cre = 7
+        }
+        if(cre === '8'){
+            cre = 8
+        }
+        if(cre === '9'){
+            cre = 9
+        }
+
+        if (sem === "1") {
+            gpacal1 += gpa_cal * cre
+            credit_cal1 += cre
+            sem1_cal = gpacal1 / credit_cal1
+
+        }
+        else if (sem === "2") {
+            gpacal2 += gpa_cal * cre
+            credit_cal2 += cre
+            sem2_cal = gpacal2 / credit_cal2
+        }
+
+        var check = sub.substring(0, 3);
+        if( (check === "261") || (check === "269") ){
+            gpacal3 += gpa_cal * cre
+            credit_cal3 += cre
+            major = gpacal3 / credit_cal3
+        }
+        console.log(gpa_cal)
+        console.log(sem1_cal)
+        console.log(sem2_cal)
+
+
+        if (df) {
+            const gpa1show = document.querySelector("#gpa_show1")
+            gpa1show.innerHTML = sem1_cal.toFixed(2)
+            const gpa2show = document.querySelector("#gpa_show2")
+            gpa2show.innerHTML = sem2_cal.toFixed(2)
+            const gpa3show = document.querySelector("#gpa_show3")
+            gpa3show.innerHTML = major.toFixed(2)
+
+            subject.innerHTML = sub
+            semester.innerHTML = sem
+            grade.innerHTML = gpa
+            credit.innerHTML = cre
+            const deleteButton = document.createElement('button')
+            deleteButton.className = 'btn btn-danger m-2 h-2'
+            deleteButton.innerHTML = 'x'
+            deleteButton.onclick = function () {
+                task.removeChild(list)
+                console.log(list)
+            }
+
+            list.append(semester)
+            list.append(subject)
+            list.append(credit)
+            list.append(grade)
+            list.append(deleteButton)
+            task.append(list)
+
+            document.querySelector("#sub").value = ""
+            document.querySelector("#sem").value = ""
+            document.querySelector("#gpa").value = ""
+            document.querySelector("#cre").value = ""
+        }
+
+        return false
     }
-  tfoot.appendChild(tr);
-});
-
-clear.addEventListener("click", () => {
-  gpArry = [];
-  tbody.querySelectorAll("*").forEach((child) => child.remove());
-  if (tfoot.querySelector("tr") !== null) {
-    tfoot.querySelector("tr").remove();
-  }
-
-  table.classList.add("display-none");
-  calcGp.classList.add("display-none");
-  clear.classList.add("display-none");
-});
+}, false)
